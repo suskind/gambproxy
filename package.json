@@ -1,0 +1,26 @@
+{
+  "name": "gambproxy",
+  "version": "1.0.0",
+  "description": "http proxy",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/suskind/gambproxy.git"
+  },
+  "keywords": [
+    "proxy"
+  ],
+  "author": "Claudio Gamboa <gamboa@pdvel.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/suskind/gambproxy/issues"
+  },
+  "homepage": "https://github.com/suskind/gambproxy#readme",
+  "dependencies": {
+    "minimist": "^1.2.0",
+    "request": "^2.87.0"
+  }
+}
