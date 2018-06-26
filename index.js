@@ -34,9 +34,6 @@ function howToUse(err) {
 
 const proxy = http.createServer((req, res) => {
     const method = req.method;
-    if (config.debug) {
-        console.log(`Asking for: ${method.toUpperCase()} ${config.url}${req.url}`);
-    }
     req.pipe(request[method.toLowerCase()](`${argv.url}${req.url}`, (error, resGet, body) => {
         if (error) {
             console.log('Error on get :: ', error);
@@ -50,6 +47,7 @@ const proxy = http.createServer((req, res) => {
             headers['Access-Control-Allow-Origin'] = '*';
         }
         if (config.debug) {
+            console.log(`Asking for: ${method.toUpperCase()} ${config.url}${req.url}`);
             console.log(`Response: \n ${body}`);
         }
         res.writeHead(resGet.statusCode, headers);
